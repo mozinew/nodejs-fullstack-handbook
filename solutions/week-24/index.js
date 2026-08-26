@@ -1,0 +1,1 @@
+export function solve(paths) { const root=[]; for(const path of paths){let level=root; for(const value of path){let n=level.find(x=>x.value===value); if(!n){n={value,label:value,children:[]};level.push(n);} level=n.children;}} return root; }

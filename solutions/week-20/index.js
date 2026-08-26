@@ -1,0 +1,1 @@
+export function solve({state,event}) { const m={pending:{send:'sending'},sending:{ok:'done',fail:'retry'},retry:{send:'sending'}}; const next=m[state]?.[event]; if(!next)throw new TypeError('INVALID_TRANSITION'); return next; }
