@@ -2,12 +2,12 @@
 
 ## 五个心智切换
 
-| Java | JavaScript / Node.js |
-|---|---|
-| 编译期静态类型 | JS 动态类型；TypeScript 只在开发期检查 |
-| 类是主要抽象 | 函数、对象、闭包和模块更常见；`class` 基于原型 |
-| 多线程服务 | 单个 JS 线程执行回调，I/O 由运行时调度 |
-| 主要使用 `null` | 同时有 `undefined`、`null` 和多种 falsy 值 |
+| Java                        | JavaScript / Node.js               |
+| --------------------------- | ---------------------------------- |
+| 编译期静态类型                     | JS 动态类型；TypeScript 只在开发期检查         |
+| 类是主要抽象                      | 函数、对象、闭包和模块更常见；`class` 基于原型        |
+| 多线程服务                       | 单个 JS 线程执行回调，I/O 由运行时调度            |
+| 主要使用 `null`                 | 同时有 `undefined`、`null` 和多种 falsy 值 |
 | checked/unchecked exception | 无 checked exception；Promise 拒绝必须处理 |
 
 ## 类型、值与相等

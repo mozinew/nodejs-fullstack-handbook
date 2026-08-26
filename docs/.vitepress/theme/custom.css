@@ -1,0 +1,11 @@
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #1e40af;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #2563eb 30%, #14b8a6);
+}
+
+.VPDoc h2 { border-top: 1px solid var(--vp-c-divider); padding-top: 28px; }
+.learning-contract { border-left: 4px solid var(--vp-c-brand-1); padding: 12px 16px; background: var(--vp-c-bg-soft); }
+.java-bridge { border-left: 4px solid #f59e0b; padding: 12px 16px; background: var(--vp-c-bg-soft); }
