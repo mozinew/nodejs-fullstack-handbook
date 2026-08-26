@@ -1,0 +1,1 @@
+export function solve(v) { const secret=/token|secret|password/i; if(Array.isArray(v))return v.map(solve); if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,secret.test(k)?'[REDACTED]':solve(x)])); return v; }

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = path.resolve(import.meta.dirname, '..');
+const map = fs.readFileSync(path.join(root,'docs/appendix/project-map.md'),'utf8');
+const names = ['associateOpportunityWithFollowup','batchCloseOpportunities','batchGetLarkUserOpenId','batchStreamUpdate','checkCustomerName','checkUserPermission','createAgentConversation','createCustomer','createCustomerGeneralName','createFollowupRecord','createOpportunity','eopDashboardData','exportOpportunityToExcel','followup_note_test','getAreaUseWeekReport','getCRMUserByName','getCustomer','getCustomerGeneralName','getLeadersFromEmail','getOpportunity','getOpportunityRecords','getOwnerRegion','getUserByEmail','getUserWeekReport','listCRMUsers','listCustomersByOwner','listOpportunitiesByOwner','listOpportunityProducts','processMultiJointLeader','processMultiOwnerLeaders','processSingleJointLeader','processSingleOwnerLeaders','querUserPermissions','queryAgentContent','queryDataInfo','queryOpportunitiesByDateRange','queryOpportunityProjectTime','queryProductCascade','queryTableStructure','qxb_advSearch','refreshOpportunityWinTime','removeOpportunityRegionalOperator','salesFollowUpDailyReport','searchCustomer','sendCrmConfirmCard','streamQueryData','streamQueryDataLong','syncAccountToSeeyon','syncCustomerFromSeeyon','syncCustomerFromSeeyonOnlyGeneralName','syncFollowupRecordRegionalOperation','syncOpportunityCodeToSeeyon','syncOpportunityFromSeeyon','syncOpportunityToSeeyon','syncRegionalOperationToOpportunityLongTask','tmpUpdateRegionalOperationLongTask','tmp_update_regional_operation','updateAccountRegionalOperation','updateCustomer','updateCustomerGenericName','updateOpportunity','updateOpportunityProbability','updateOpportunityProductCenter','updateOpportunityRegionalOperation','updateRegionalOperation','updateSignContractTime','updateWonOpportunitiesWinTime'];
+const components = ['agent_input','dashboardBusinessOverview','pcMultiCustomCascaderSelect','mobileMultiCustomCascaderSelect'];
+const missing = [...names,...components].filter(name => !map.includes(name));
+if (names.length !== 67) throw new Error(`expected 67 functions, got ${names.length}`);
+if (missing.length) { console.error(`coverage missing: ${missing.join(', ')}`); process.exit(1); }
+console.log('project coverage ok: 67 functions and 4 components');
