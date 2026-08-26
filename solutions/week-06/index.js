@@ -1,0 +1,1 @@
+export function solve(s) { if(!/^\d{4}-\d{2}-\d{2}$/.test(s)) throw new TypeError('INVALID_DATE'); const d=new Date(s+'T00:00:00.000Z'); if(Number.isNaN(d.valueOf())||d.toISOString().slice(0,10)!==s) throw new TypeError('INVALID_DATE'); return d.toISOString(); }
